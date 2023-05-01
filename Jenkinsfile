@@ -3,11 +3,9 @@ pipeline {
   stages {
     stage('Run') {
       steps {
-        sh '''stage(name){
-   sh ./scripts/build.sh 
-}'''
-        }
+        sh 'sh \'sh build.sh\''
       }
-
     }
+
   }
+}

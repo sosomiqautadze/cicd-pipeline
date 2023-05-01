@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'nodejs:19'
-    }
-
-  }
+  agent none
   stages {
     stage('Run') {
       steps {

@@ -1,15 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Webhook') {
+    stage('Run') {
       steps {
-        git(url: 'https://github.com/sosomiqautadze/cicd-pipeline.git', branch: 'main', poll: true)
-      }
-    }
-
-    stage('test') {
-      steps {
-        sh 'npm install'
+        sh './scripts/build.sh '
       }
     }
 

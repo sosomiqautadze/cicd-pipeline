@@ -15,7 +15,10 @@ pipeline {
 
     stage('Build') {
       steps {
-        dockerNode(image: 'node:16.13.1-alpine')
+        dockerNode(image: '16.13.1-alpine') {
+          node(label: '16.13.1-alpine')
+        }
+
       }
     }
 

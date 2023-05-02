@@ -16,7 +16,7 @@ pipeline {
     stage('Build') {
       steps {
         dockerNode(image: '16.13.1-alpine') {
-          node(label: '16.13.1-alpine')
+          sh 'sh \'docker build -t myimage .\''
         }
 
       }

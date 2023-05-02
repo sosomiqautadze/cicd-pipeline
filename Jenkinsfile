@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:lts-alpine'
-    }
-
-  }
+  agent any
   stages {
     stage('Run') {
       steps {
@@ -15,6 +10,12 @@ pipeline {
     stage('Test') {
       steps {
         sh 'sh \'./scripts/test.sh\''
+      }
+    }
+
+    stage('Build') {
+      steps {
+        dockerNode(image: 'nodejs:19')
       }
     }
 

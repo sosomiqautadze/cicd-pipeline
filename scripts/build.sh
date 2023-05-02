@@ -1,2 +1,2 @@
 #!/bin/bash
-dnf npm install
+npm install

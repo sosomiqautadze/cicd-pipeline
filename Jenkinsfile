@@ -15,7 +15,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        dockerNode(image: 'alpine:3.16')
+        dockerNode(image: 'node:16.13.1-alpine')
       }
     }
 
